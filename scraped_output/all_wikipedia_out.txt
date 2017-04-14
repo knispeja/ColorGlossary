@@ -262,6 +262,7 @@
 "Coyote brown" 81613C
 "Cotton candy" FFBCD9
 "Cream" FFFDD0
+"Cream (web)" FFFFCC
 "Crimson" DC143C
 "Crimson glory" BE0032
 "Crimson red" 990000
@@ -289,12 +290,11 @@
 "Dark cyan" 008B8B
 "Dark electric blue" 536878
 "Dark goldenrod" B8860B
-"Dark gray (X11)" A9A9A9
 "Dark green" 013220
-"Dark green (X11)" 006400
+"Dark green (web)" 006400
 "Dark gunmetal" 1F262A
 "Dark imperial blue" 00416A
-"Dark imperial blue" 00147E
+"Deep imperial blue" 00147E
 "Dark jungle green" 1A2421
 "Dark khaki" BDB76B
 "Dark lava" 483C32
@@ -481,7 +481,7 @@
 "Glossy Grape" AB92B3
 "GO green" 00AB66
 "Gold (metallic)" D4AF37
-"Gold (web)" FFD700
+"Gold" FFD700
 "Gold Fusion" 85754E
 "Golden brown" 996515
 "Golden poppy" FCC200
@@ -491,11 +491,10 @@
 "Granny Smith Apple" A8E4A0
 "Grape" 6F2DA8
 "Gray" 808080
-"Gray (web)" 808080
-"Gray (X11)" BEBEBE
+"Gray (web)" BEBEBE
 "Gray-asparagus" 465945
 "Gray-blue" 8C92AC
-"Green (X11)" 00FF00
+"Green" 00FF00
 "Green (Crayola)" 1CAC78
 "Green (web)" 008000
 "Green (Munsell)" 00A877
@@ -595,7 +594,6 @@
 "Lava" CF1020
 "Lavender" B57EDC
 "Lavender (web)" E6E6FA
-"Lavender blue" CCCCFF
 "Lavender blush" FFF0F5
 "Lavender gray" C4C3D0
 "Lavender indigo" 9457EB
@@ -651,7 +649,7 @@
 "Lilac" C8A2C8
 "Lilac Luster" AE98AA
 "Lime" BFFF00
-"Lime (X11)" 00FF00
+"Lime (web)" 00FF00
 "Lime green" 32CD32
 "Limerick" 9DC209
 "Lincoln green" 195905
@@ -690,9 +688,9 @@
 "Mardi Gras" 880085
 "Marigold" EAA221
 "Maroon (Crayola)" C32148
-"Maroon (W3C)" 7F0000
-"Maroon (web)" 800000
-"Maroon (X11)" B03060
+"Maroon (web)" 7F0000
+"Maroon" 800000
+"Rich Maroon" B03060
 "Mauve" E0B0FF
 "Mauve taupe" 915F6D
 "Mauvelous" EF98AA
@@ -946,8 +944,7 @@
 "Pumpkin" FF7518
 "Purple" 800080
 "Purple (Munsell)" 9F00C5
-"Purple (W3C)" 7F007F
-"Purple (X11)" A020F0
+"Purple (web)" 7F007F
 "Purple Heart" 69359C
 "Purple mountain majesty" 9678B6
 "Purple navy" 4E5180
@@ -1047,7 +1044,7 @@
 "Sage" BCB88A
 "St. Patrick's blue" 23297A
 "Salmon" FA8072
-"Salmon pink" FF91A4
+"Salmon (Crayola)" FF91A4
 "Sand" C2B280
 "Sand dune" 967117
 "Sandstorm" ECD540
@@ -1061,7 +1058,7 @@
 "Sasquatch Socks" FF4681
 "Satin sheen gold" CBA135
 "Scarlet" FF2400
-"Scarlet" FD0E35
+"Scarlet (Crayola)" FD0E35
 "Schauss pink" FF91AF
 "School bus yellow" FFD800
 "Screamin' Green" 66FF66
@@ -1154,7 +1151,6 @@
 "Taupe" 483C32
 "Taupe gray" 8B8589
 "Tea green" D0F0C0
-"Tea rose" F88379
 "Tea rose" F4C2C2
 "Teal" 008080
 "Teal blue" 367588
@@ -1181,6 +1177,7 @@
 "Tufts Blue" 3E8EDE
 "Tulip" FF878D
 "Tumbleweed" DEAA88
+"Turkey red" A91101
 "Turkish rose" B57281
 "Turquoise" 40E0D0
 "Turquoise blue" 00FFEF
@@ -1294,7 +1291,7 @@
 "Yellow (Munsell)" EFCC00
 "Yellow (NCS)" FFD300
 "Yellow (Pantone)" FEDF00
-"Yellow (process)" FFEF00
+"Process Yellow" FFEF00
 "Yellow (RYB)" FEFE33
 "Yellow-green" 9ACD32
 "Yellow Orange" FFAE42
