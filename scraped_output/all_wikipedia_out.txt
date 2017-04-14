@@ -793,6 +793,7 @@
 "Nickel" 727472
 "Non-photo blue" A4DDED
 "North Texas Green" 059033
+"Northwestern Purple" 4E2A84
 "Nyanza" E9FFDB
 "Ocean Blue" 4F42B5
 "Ocean Boat Blue" 0077BE
@@ -943,7 +944,7 @@
 "Pullman Brown (UPS Brown)" 644117
 "Pullman Green" 3B331C
 "Pumpkin" FF7518
-"Purple (web)" 800080
+"Purple" 800080
 "Purple (Munsell)" 9F00C5
 "Purple (W3C)" 7F007F
 "Purple (X11)" A020F0
