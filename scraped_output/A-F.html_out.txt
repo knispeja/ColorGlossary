@@ -1,0 +1,469 @@
+﻿"Absolute zero" 0048BA
+"Acid green" B0BF1A
+"Aero" 7CB9E8
+"Aero blue" C9FFE5
+"African violet" B284BE
+"Air Force blue (RAF)" 5D8AA8
+"Air Force blue (USAF)" 00308F
+"Air superiority blue" 72A0C1
+"Alabama crimson" AF002A
+"Alabaster" F2F0E6
+"Alice blue" F0F8FF
+"Alien Armpit" 84DE02
+"Alizarin crimson" E32636
+"Alloy orange" C46210
+"Almond" EFDECD
+"Amaranth" E52B50
+"Amaranth deep purple" 9F2B68
+"Amaranth pink" F19CBB
+"Amaranth purple" AB274F
+"Amaranth red" D3212D
+"Amazon Store" 3B7A57
+"Amazonite" 00C4B0
+"Amber" FFBF00
+"Amber (SAE/ECE)" FF7E00
+"American rose" FF033E
+"Amethyst" 9966CC
+"Android green" A4C639
+"Anti-flash white" F2F3F4
+"Antique brass" CD9575
+"Antique bronze" 665D1E
+"Antique fuchsia" 915C83
+"Antique ruby" 841B2D
+"Antique white" FAEBD7
+"Ao (English)" 008000
+"Apple Green" 8DB600
+"Apricot" FBCEB1
+"Aqua" 00FFFF
+"Aquamarine" 7FFFD4
+"Arctic lime" D0FF14
+"Army green" 4B5320
+"Arsenic" 3B444B
+"Artichoke" 8F9779
+"Arylide yellow" E9D66B
+"Ash gray" B2BEB5
+"Asparagus" 87A96B
+"Atomic tangerine" FF9966
+"Auburn" A52A2A
+"Aureolin" FDEE00
+"AuroMetalSaurus" 6E7F80
+"Avocado" 568203
+"Awesome" FF2052
+"Aztec Gold" C39953
+"Azure" 007FFF
+"Azure (web)" F0FFFF
+"Azure mist" F0FFFF
+"Azureish white" DBE9F4
+"Baby blue" 89CFF0
+"Baby blue eyes" A1CAF1
+"Baby pink" F4C2C2
+"Baby powder" FEFEFA
+"Baker-Miller pink" FF91AF
+"Ball blue" 21ABCD
+"Banana Mania" FAE7B5
+"Banana yellow" FFE135
+"Bangladesh green" 006A4E
+"Barbie pink" E0218A
+"Barn red" 7C0A02
+"Battery Charged Blue" 1DACD6
+"Battleship grey" 848482
+"Bazaar" 98777B
+"Beau blue" BCD4E6
+"Beaver" 9F8170
+"Begonia" FA6E79
+"Beige" F5F5DC
+"B'dazzled blue" 2E5894
+"Big dip o’ruby" 9C2542
+"Big Foot Feet" E88E5A
+"Bisque" FFE4C4
+"Bistre" 3D2B1F
+"Bistre brown" 967117
+"Bitter lemon" CAE00D
+"Bitter lime" BFFF00
+"Bittersweet" FE6F5E
+"Bittersweet shimmer" BF4F51
+"Black" 000000
+"Black bean" 3D0C02
+"Black Coral" 54626F
+"Black leather jacket" 253529
+"Black olive" 3B3C36
+"Black Shadows" BFAFB2
+"Blanched almond" FFEBCD
+"Blast-off bronze" A57164
+"Bleu de France" 318CE7
+"Blizzard Blue" ACE5EE
+"Blond" FAF0BE
+"Blue" 0000FF
+"Blue (Crayola)" 1F75FE
+"Blue (Munsell)" 0093AF
+"Blue (NCS)" 0087BD
+"Blue (Pantone)" 0018A8
+"Blue (pigment)" 333399
+"Blue (RYB)" 0247FE
+"Blue Bell" A2A2D0
+"Blue Bolt" 00B9FB
+"Blue-gray" 6699CC
+"Blue-green" 0D98BA
+"Blue Jeans" 5DADEC
+"Blue Lagoon" ACE5EE
+"Blue-magenta violet" 553592
+"Blue sapphire" 126180
+"Blue-violet" 8A2BE2
+"Blue yonder" 5072A7
+"Blueberry" 4F86F7
+"Bluebonnet" 1C1CF0
+"Blush" DE5D83
+"Bole" 79443B
+"Bondi blue" 0095B6
+"Bone" E3DAC9
+"Booger Buster" DDE26A
+"Boston University Red" CC0000
+"Bottle green" 006A4E
+"Boysenberry" 873260
+"Brandeis blue" 0070FF
+"Brass" B5A642
+"Brick red" CB4154
+"Bright cerulean" 1DACD6
+"Bright green" 66FF00
+"Bright lavender" BF94E4
+"Bright lilac" D891EF
+"Bright maroon" C32148
+"Bright navy blue" 1974D2
+"Bright pink" FF007F
+"Bright turquoise" 08E8DE
+"Bright ube" D19FE8
+"Bright Yellow (Crayola)" FFAA1D
+"Brilliant azure" 3399FF
+"Brilliant lavender" F4BBFF
+"Brilliant rose" FF55A3
+"Brink pink" FB607F
+"British racing green" 004225
+"Bronze" CD7F32
+"Bronze Yellow" 737000
+"Brown (traditional)" 964B00
+"Brown (web)" A52A2A
+"Brown-nose" 6B4423
+"Brown Sugar" AF6E4D
+"Brown Yellow" cc9966
+"Brunswick green" 1B4D3E
+"Bubble gum" FFC1CC
+"Bubbles" E7FEFF
+"Bud green" 7BB661
+"Buff" F0DC82
+"Bulgarian rose" 480607
+"Burgundy" 800020
+"Burlywood" DEB887
+"Burnished Brown" A17A74
+"Burnt orange" CC5500
+"Burnt sienna" E97451
+"Burnt umber" 8A3324
+"Button Blue" 24A0ED
+"Byzantine" BD33A4
+"Byzantium" 702963
+"Cadet" 536872
+"Cadet blue" 5F9EA0
+"Cadet grey" 91A3B0
+"Cadmium green" 006B3C
+"Cadmium orange" ED872D
+"Cadmium red" E30022
+"Cadmium yellow" FFF600
+"Café au lait" A67B5B
+"Café noir" 4B3621
+"Cal Poly Pomona green" 1E4D2B
+"Cambridge Blue" A3C1AD
+"Camel" C19A6B
+"Cameo pink" EFBBCC
+"Camouflage green" 78866B
+"Canary" FFFF99
+"Canary yellow" FFEF00
+"Candy apple red" FF0800
+"Candy pink" E4717A
+"Capri" 00BFFF
+"Caput mortuum" 592720
+"Cardinal" C41E3A
+"Caribbean green" 00CC99
+"Carmine" 960018
+"Rich carmine" D70040
+"Carmine pink" EB4C42
+"Carmine red" FF0038
+"Carnation pink" FFA6C9
+"Carnelian" B31B1B
+"Carolina blue" 56A0D3
+"Carrot orange" ED9121
+"Castleton green" 00563F
+"Catalina blue" 062A78
+"Catawba" 703642
+"Cedar Chest" C95A49
+"Ceil" 92A1CF
+"Celadon" ACE1AF
+"Celadon blue" 007BA7
+"Celadon green" 2F847C
+"Celeste" B2FFFF
+"Celestial blue" 4997D0
+"Cerise" DE3163
+"Cerise pink" EC3B83
+"Cerulean" 007BA7
+"Cerulean blue" 2A52BE
+"Cerulean frost" 6D9BC3
+"CG Blue" 007AA5
+"CG Red" E03C31
+"Chamoisee" A0785A
+"Champagne" F7E7CE
+"Champagne pink" F1DDCF
+"Charcoal" 36454F
+"Charleston green" 232B2B
+"Charm pink" E68FAC
+"Chartreuse (traditional)" DFFF00
+"Chartreuse (web)" 7FFF00
+"Cherry" DE3163
+"Cherry blossom pink" FFB7C5
+"Chestnut" 954535
+"China pink" DE6FA1
+"China rose" A8516E
+"Chinese red" AA381E
+"Chinese violet" 856088
+"Chlorophyll green" 4AFF00
+"Chocolate (traditional)" 7B3F00
+"Chocolate (web)" D2691E
+"Chrome yellow" FFA700
+"Cinereous" 98817B
+"Cinnabar" E34234
+"Cinnamon" D2691E
+"Cinnamon Satin" CD607E
+"Citrine" E4D00A
+"Citron" 9FA91F
+"Claret" 7F1734
+"Classic rose" FBCCE7
+"Cobalt Blue" 0047AB
+"Cocoa brown" D2691E
+"Coconut" 965A3E
+"Coffee" 6F4E37
+"Columbia Blue" C4D8E2
+"Congo pink" F88379
+"Cool Black" 002E63
+"Cool grey" 8C92AC
+"Copper" B87333
+"Copper (Crayola)" DA8A67
+"Copper penny" AD6F69
+"Copper red" CB6D51
+"Copper rose" 996666
+"Coquelicot" FF3800
+"Coral" FF7F50
+"Coral pink" F88379
+"Coral red" FF4040
+"Coral Reef" FD7C6E
+"Cordovan" 893F45
+"Corn" FBEC5D
+"Cornell Red" B31B1B
+"Cornflower blue" 6495ED
+"Cornsilk" FFF8DC
+"Cosmic Cobalt" 2E2D88
+"Cosmic latte" FFF8E7
+"Coyote brown" 81613C
+"Cotton candy" FFBCD9
+"Cream" FFFDD0
+"Crimson" DC143C
+"Crimson glory" BE0032
+"Crimson red" 990000
+"Cultured" F5F5F5
+"Cyan" 00FFFF
+"Cyan azure" 4E82B4
+"Cyan-blue azure" 4682BF
+"Cyan cobalt blue" 28589C
+"Cyan cornflower blue" 188BC2
+"Cyan (process)" 00B7EB
+"Cyber grape" 58427C
+"Cyber yellow" FFD300
+"Cyclamen" F56FA1
+"Daffodil" FFFF31
+"Dandelion" F0E130
+"Dark blue" 00008B
+"Dark blue-gray" 666699
+"Dark brown" 654321
+"Dark brown-tangelo" 88654E
+"Dark byzantium" 5D3954
+"Dark candy apple red" A40000
+"Dark cerulean" 08457E
+"Dark chestnut" 986960
+"Dark coral" CD5B45
+"Dark cyan" 008B8B
+"Dark electric blue" 536878
+"Dark goldenrod" B8860B
+"Dark gray (X11)" A9A9A9
+"Dark green" 013220
+"Dark green (X11)" 006400
+"Dark gunmetal" 1F262A
+"Dark imperial blue" 00416A
+"Dark imperial blue" 00147E
+"Dark jungle green" 1A2421
+"Dark khaki" BDB76B
+"Dark lava" 483C32
+"Dark lavender" 734F96
+"Dark liver" 534B4F
+"Dark liver (horses)" 543D37
+"Dark magenta" 8B008B
+"Dark medium gray" A9A9A9
+"Dark midnight blue" 003366
+"Dark moss green" 4A5D23
+"Dark olive green" 556B2F
+"Dark orange" FF8C00
+"Dark orchid" 9932CC
+"Dark pastel blue" 779ECB
+"Dark pastel green" 03C03C
+"Dark pastel purple" 966FD6
+"Dark pastel red" C23B22
+"Dark pink" E75480
+"Dark powder blue" 003399
+"Dark puce" 4F3A3C
+"Dark purple" 301934
+"Dark raspberry" 872657
+"Dark red" 8B0000
+"Dark salmon" E9967A
+"Dark scarlet" 560319
+"Dark sea green" 8FBC8F
+"Dark sienna" 3C1414
+"Dark sky blue" 8CBED6
+"Dark slate blue" 483D8B
+"Dark slate gray" 2F4F4F
+"Dark spring green" 177245
+"Dark tan" 918151
+"Dark tangerine" FFA812
+"Dark taupe" 483C32
+"Dark terra cotta" CC4E5C
+"Dark turquoise" 00CED1
+"Dark vanilla" D1BEA8
+"Dark violet" 9400D3
+"Dark yellow" 9B870C
+"Dartmouth green" 00703C
+"Davy's grey" 555555
+"Debian red" D70A53
+"Deep aquamarine" 40826D
+"Deep carmine" A9203E
+"Deep carmine pink" EF3038
+"Deep carrot orange" E9692C
+"Deep cerise" DA3287
+"Deep champagne" FAD6A5
+"Deep chestnut" B94E48
+"Deep coffee" 704241
+"Deep fuchsia" C154C1
+"Deep Green" 056608
+"Deep green-cyan turquoise" 0E7C61
+"Deep jungle green" 004B49
+"Deep koamaru" 333366
+"Deep lemon" F5C71A
+"Deep lilac" 9955BB
+"Deep magenta" CC00CC
+"Deep maroon" 820000
+"Deep mauve" D473D4
+"Deep moss green" 355E3B
+"Deep peach" FFCBA4
+"Deep pink" FF1493
+"Deep puce" A95C68
+"Deep Red" 850101
+"Deep ruby" 843F5B
+"Deep saffron" FF9933
+"Deep sky blue" 00BFFF
+"Deep Space Sparkle" 4A646C
+"Deep spring bud" 556B2F
+"Deep Taupe" 7E5E60
+"Deep Tuscan red" 66424D
+"Deep violet" 330066
+"Deer" BA8759
+"Denim" 1560BD
+"Denim Blue" 2243B6
+"Desaturated cyan" 669999
+"Desert" C19A6B
+"Desert sand" EDC9AF
+"Desire" EA3C53
+"Diamond" B9F2FF
+"Dim gray" 696969
+"Dingy Dungeon" C53151
+"Dirt" 9B7653
+"Dodger blue" 1E90FF
+"Dodie yellow" FEF65B
+"Dogwood rose" D71868
+"Dollar bill" 85BB65
+"Dolphin Gray" 828E84
+"Donkey brown" 664C28
+"Drab" 967117
+"Duke blue" 00009C
+"Dust storm" E5CCC9
+"Dutch white" EFDFBB
+"Earth yellow" E1A95F
+"Ebony" 555D50
+"Ecru" C2B280
+"Eerie black" 1B1B1B
+"Eggplant" 614051
+"Eggshell" F0EAD6
+"Egyptian blue" 1034A6
+"Electric blue" 7DF9FF
+"Electric crimson" FF003F
+"Electric cyan" 00FFFF
+"Electric green" 00FF00
+"Electric indigo" 6F00FF
+"Electric lavender" F4BBFF
+"Electric lime" CCFF00
+"Electric purple" BF00FF
+"Electric ultramarine" 3F00FF
+"Electric violet" 8F00FF
+"Electric yellow" FFFF33
+"Emerald" 50C878
+"Eminence" 6C3082
+"English green" 1B4D3E
+"English lavender" B48395
+"English red" AB4B52
+"English vermillion" CC474B
+"English violet" 563C5C
+"Eton blue" 96C8A2
+"Eucalyptus" 44D7A8
+"Fallow" C19A6B
+"Falu red" 801818
+"Fandango" B53389
+"Fandango pink" DE5285
+"Fashion fuchsia" F400A1
+"Fawn" E5AA70
+"Feldgrau" 4D5D53
+"Feldspar" FDD5B1
+"Fern green" 4F7942
+"Ferrari Red" FF2800
+"Field drab" 6C541E
+"Fiery Rose" FF5470
+"Firebrick" B22222
+"Fire engine red" CE2029
+"Flame" E25822
+"Flamingo pink" FC8EAC
+"Flattery" 6B4423
+"Flavescent" F7E98E
+"Flax" EEDC82
+"Flirt" A2006D
+"Floral white" FFFAF0
+"Fluorescent orange" FFBF00
+"Fluorescent pink" FF1493
+"Fluorescent yellow" CCFF00
+"Folly" FF004F
+"Forest green" 014421
+"Forest green (web)" 228B22
+"French beige" A67B5B
+"French bistre" 856D4D
+"French blue" 0072BB
+"French fuchsia" FD3F92
+"French lilac" 86608E
+"French lime" 9EFD38
+"French mauve" D473D4
+"French pink" FD6C9E
+"French plum" 811453
+"French puce" 4E1609
+"French raspberry" C72C48
+"French rose" F64A8A
+"French sky blue" 77B5FE
+"French violet" 8806CE
+"French wine" AC1E44
+"Fresh Air" A6E7FF
+"Frogert" E936A7
+"Fuchsia" FF00FF
+"Fuchsia (Crayola)" C154C1
+"Fuchsia pink" FF77FF
+"Fuchsia purple" CC397B
+"Fuchsia rose" C74375
+"Fulvous" E48400
+"Fuzzy Wuzzy" CC6666
