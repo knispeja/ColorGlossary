@@ -1,3 +1,4 @@
+Name Hex
 "Absolute zero" 0048BA
 "Acid green" B0BF1A
 "Aero" 7CB9E8
@@ -183,7 +184,6 @@
 "Cardinal" C41E3A
 "Caribbean green" 00CC99
 "Carmine" 960018
-"Rich carmine" D70040
 "Carmine pink" EB4C42
 "Carmine red" FF0038
 "Carnation pink" FFA6C9
@@ -728,7 +728,7 @@
 "Medium taupe" 674C47
 "Medium turquoise" 48D1CC
 "Medium Tuscan red" 79443B
-"Medium vermilion" D9603B
+"Chilean fire" D9603B
 "Medium violet-red" C71585
 "Mellow apricot" F8B878
 "Mellow yellow" F8DE7E
@@ -744,7 +744,7 @@
 "Middle Green Yellow" ACBF60
 "Middle Purple" D982B5
 "Middle Red" E58E73
-"Middle Red Purple" A55353
+"Middle Red Purple (Munsell)" A55353
 "Middle Yellow" FFEB00
 "Middle Yellow Red" ECB176
 "Midnight" 702670
@@ -882,7 +882,7 @@
 "Patriarch" 800080
 "Payne's grey" 536878
 "Peach" FFE5B4
-"Peach" FFCBA4
+"Peach (Crayola)" FFCBA4
 "Peach-orange" FFCC99
 "Peach puff" FFDAB9
 "Peach-yellow" FADFAD
@@ -1222,7 +1222,7 @@
 "Venetian red" C80815
 "Verdigris" 43B3AE
 "Vermilion" E34234
-"Vermilion" D9381E
+"Medium vermilion" D9381E
 "Veronica" A020F0
 "Very light azure" 74BBFB
 "Very light blue" 6666FF
