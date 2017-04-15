@@ -6,10 +6,32 @@
 	<title>Color Glossary</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="js/colorGlossary.js"></script>
+	<script src="js/jscolor.js"></script>
 </head>
 
 <body>
-    TODO :)
+    <h2>Example 1</h2>
+	Color: <input class="jscolor" value="ab2567">
+
+
+
+	<h2>Example 2</h2>
+
+	<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
+		Pick text color
+	</button>
+
+	HEX value: <input id="chosen-value" value="000000">
+
+	<script>
+	function setTextColor(picker) {
+		var chosenColor = '#' + picker.toString();
+		if (colorGlossary.hasOwnProperty(chosenColor)) {
+			alert(colorGlossary[chosenColor][0]);
+		}
+		document.getElementsByTagName('body')[0].style.color = chosenColor;
+	}
+	</script>
 </body>
 
 </html>
