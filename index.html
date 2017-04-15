@@ -10,26 +10,32 @@
 </head>
 
 <body>
-    <h2>Example 1</h2>
-	Color: <input class="jscolor" value="ab2567">
 
+	<div id="upperDiv">
+    	<h2>Color Glossary</h2>
+		HEX value: <input id="chosen-value" value="000000">
+		<br>
+		Name: <span id="colorNames">nil</span>
+	</div>
 
+	<div id="middleDiv">
+		<hr>
+	</div>
 
-	<h2>Example 2</h2>
-
-	<button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">
-		Pick text color
-	</button>
-
-	HEX value: <input id="chosen-value" value="000000">
+	<div id="lowerDiv">
+		<button class="jscolor {valueElement:'chosen-value', onFineChange:'chooseColor(this)'}">
+			Choose Color
+		</button>
+	</div>
 
 	<script>
-	function setTextColor(picker) {
+	
+	function chooseColor(picker) {
 		var chosenColor = '#' + picker.toString();
 		if (colorGlossary.hasOwnProperty(chosenColor)) {
-			alert(colorGlossary[chosenColor][0]);
+			document.getElementById("colorNames").textContent = colorGlossary[chosenColor][0];
 		}
-		document.getElementsByTagName('body')[0].style.color = chosenColor;
+		document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
 	}
 	</script>
 </body>

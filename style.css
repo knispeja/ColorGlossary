@@ -1,0 +1,24 @@
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+hr {
+    margin: 0;
+}
+
+#upperDiv {
+    color: orangered;
+    background-color: whitesmoke;
+    padding-top: 0px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+#middleDiv {
+    background-color: whitesmoke;
+}
+
+#lowerDiv {
+    padding-top: 12px;
+}
