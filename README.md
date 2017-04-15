@@ -4,8 +4,8 @@ Project aimed at compiling a list of colors larger than that found on [Name That
 
 ---
 
-Sources:
-
-[Resene List Download](http://www.resene.co.nz/swatches/download_pencils.xls)
+Sources, listed from highest to lowest priority when duplicate names were found for different hex values:
 
 [Wikipedia Color Lists](https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F)
+
+[Resene List Download](http://www.resene.co.nz/swatches/download_pencils.xls)
