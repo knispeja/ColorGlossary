@@ -15,7 +15,7 @@
     	<h2>Color Glossary</h2>
 		HEX value: <input id="chosen-value" value="ffffff">
 		<br>
-		Name: <span id="colorNames">(Select a color below!)</span>
+		Name: <i><span id="colorNames">(Select a color below!)</span></i>
 	</div>
 
 	<div id="middleDiv">
@@ -23,7 +23,7 @@
 	</div>
 
 	<div id="lowerDiv">
-		<button class="jscolor {valueElement:'chosen-value', onFineChange:'chooseColor(this)'}">
+		<button class="jscolor {width:365, height:225, valueElement:'chosen-value', onFineChange:'chooseColor(this)'}">
 			Choose Color
 		</button>
 	</div>
@@ -33,7 +33,7 @@
 	function chooseColor(picker) {
 		var chosenColor = '#' + picker.toString();
 		if (colorGlossary.hasOwnProperty(chosenColor)) {
-			document.getElementById("colorNames").textContent = colorGlossary[chosenColor][0];
+			document.getElementById("colorNames").textContent = colorGlossary[chosenColor][0].toLowerCase();
 		}
 		document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
 	}
