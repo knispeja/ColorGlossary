@@ -53,13 +53,14 @@
 					div.hexColor = approxColorHex;
 					div.style.color = readableColorForBackground(approxColorHex);
 					div.innerHTML = names[j];
+					div.style.border = "1px dashed " + approxColorHex;
 
 					div.onmouseover = function() {
 						this.style.border = "1px dashed " + readableColorForBackground(rgbStringToHex(this.style.backgroundColor));
 					}
 
 					div.onmouseleave = function() {
-						this.style.border = "none";
+						this.style.border = "1px dashed " + rgbStringToHex(this.style.backgroundColor);
 					}
 
 					div.onclick = function() {
