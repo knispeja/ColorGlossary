@@ -5,6 +5,8 @@
 <head>
 	<title>Color Glossary</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/colorUtils.js"></script>
+	<script src="js/kdTree.js"></script>
 	<script src="js/colorGlossary.js"></script>
 	<script src="js/jscolor.js"></script>
 </head>
@@ -29,14 +31,13 @@
 	</div>
 
 	<script>
-	
-	function chooseColor(picker) {
-		var chosenColor = '#' + picker.toString();
-		if (colorGlossary.hasOwnProperty(chosenColor)) {
-			document.getElementById("colorNames").textContent = colorGlossary[chosenColor][0].toLowerCase();
+		function chooseColor(picker) {
+			var chosenColor = '#' + picker.toString();
+			var approxColorRgb = colorProximityTree.nearest(hexToRgb(chosenColor), 5)[0][0];
+			var approxColor = rgbToHex(approxColorRgb.r, approxColorRgb.g, approxColorRgb.b);
+			document.getElementById("colorNames").textContent = colorGlossary[approxColor][0].toLowerCase();
+			document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
 		}
-		document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
-	}
 	</script>
 </body>
 
