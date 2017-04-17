@@ -33,10 +33,20 @@
 	<script>
 		function chooseColor(picker) {
 			var chosenColor = '#' + picker.toString();
-			var approxColorRgb = colorProximityTree.nearest(hexToRgb(chosenColor), 5)[0][0];
-			var approxColor = rgbToHex(approxColorRgb.r, approxColorRgb.g, approxColorRgb.b);
-			document.getElementById("colorNames").textContent = colorGlossary[approxColor][0].toLowerCase();
 			document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
+
+			var nearestColors = colorProximityTree.nearest(hexToRgb(chosenColor), 5);
+			var allNames = [];
+			for (var i = 0; i < nearestColors.length; i++) {
+				var approxColorRgb = nearestColors[i][0];
+				var approxColorHex = rgbToHex(approxColorRgb.r, approxColorRgb.g, approxColorRgb.b);
+				var names = colorGlossary[approxColorHex];
+				for (var j = 0; j < names.length; j++) {
+					allNames.push(names[j].toLowerCase());
+				}
+			}
+					
+			document.getElementById("colorNames").textContent = allNames.join(", ");
 		}
 	</script>
 </body>

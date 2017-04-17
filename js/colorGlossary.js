@@ -6,9 +6,9 @@ var allColors = [];
 var colorGlossary = {};
 for (var name in colorGlossaryReverse) {
     var hex = colorGlossaryReverse[name];
-    allColors.push(hexToRgb(hex));
     if (!colorGlossary.hasOwnProperty(hex)) {
         colorGlossary[hex] = [];
+        allColors.push(hexToRgb(hex));
     }
     colorGlossary[hex].push(name);
 }
