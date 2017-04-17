@@ -17,7 +17,7 @@ button {
     background-color: whitesmoke;
     padding-top: 0px;
     padding-left: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
 }
 
 #middleDiv {
@@ -26,4 +26,14 @@ button {
 
 #lowerDiv {
     padding-top: 12px;
+    width: 100%;
+}
+
+#lowerDivLeft {
+    width: 300px;
+    float: left;
+}
+
+#lowerDivRight {
+    float: right;
 }

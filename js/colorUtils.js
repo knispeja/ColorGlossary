@@ -15,3 +15,11 @@ function hexToRgb(hex) {
         b: parseInt(result[3], 16)
     } : null;
 }
+
+function readableColorForBackground(hex) {
+    var color = hexToRgb(hex);
+    if(0.213 * color.r + 0.715 * color.g + 0.072 * color.b > 255 / 2) {
+        return "#000000";
+    }
+    return "#ffffff";
+}

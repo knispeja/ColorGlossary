@@ -16,8 +16,6 @@
 	<div id="upperDiv">
     	<h2>Color Glossary</h2>
 		HEX value: <input id="chosen-value" value="ffffff">
-		<br>
-		Name: <i><span id="colorNames">(Select a color below!)</span></i>
 	</div>
 
 	<div id="middleDiv">
@@ -25,9 +23,14 @@
 	</div>
 
 	<div id="lowerDiv">
-		<button class="jscolor {width:365, height:225, valueElement:'chosen-value', onFineChange:'chooseColor(this)'}">
-			Choose Color
-		</button>
+		<div id="lowerDivLeft">
+			<button class="jscolor {width:300, height:200, valueElement:'chosen-value', onFineChange:'chooseColor(this)'}">
+				Choose Color
+			</button>
+		</div>
+	</div>
+
+	<div id="lowerDivRight">
 	</div>
 
 	<script>
@@ -36,17 +39,24 @@
 			document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
 
 			var nearestColors = colorProximityTree.nearest(hexToRgb(chosenColor), 5);
-			var allNames = [];
+			var colorNameDiv = document.getElementById("lowerDivRight");
+			colorNameDiv.innerHTML = "";
 			for (var i = 0; i < nearestColors.length; i++) {
 				var approxColorRgb = nearestColors[i][0];
 				var approxColorHex = rgbToHex(approxColorRgb.r, approxColorRgb.g, approxColorRgb.b);
 				var names = colorGlossary[approxColorHex];
 				for (var j = 0; j < names.length; j++) {
-					allNames.push(names[j].toLowerCase());
+					var div = document.createElement("div");
+					div.style.height = "50px";
+					div.style.width = "250px";
+					div.style.margin = "4px";
+					div.style.padding = "15px";
+					div.style.background = approxColorHex;
+					div.style.color = readableColorForBackground(approxColorHex);;
+					div.innerHTML = names[j];
+					colorNameDiv.appendChild(div);
 				}
 			}
-					
-			document.getElementById("colorNames").textContent = allNames.join(", ");
 		}
 	</script>
 </body>
