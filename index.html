@@ -24,7 +24,7 @@
 
 	<div id="lowerDiv">
 		<div id="lowerDivLeft">
-			<button class="jscolor {width:300, height:200, valueElement:'chosen-value', onFineChange:'chooseColor(this)'}">
+			<button id="colorPicker" class="jscolor {width:300, height:200, valueElement:'chosen-value', onFineChange:'chooseColor(\'#\' + this.toString())'}">
 				Choose Color
 			</button>
 		</div>
@@ -34,10 +34,8 @@
 	</div>
 
 	<script>
-		function chooseColor(picker) {
-			var chosenColor = '#' + picker.toString();
+		function chooseColor(chosenColor) {
 			document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
-
 			var nearestColors = colorProximityTree.nearest(hexToRgb(chosenColor), 5);
 			var colorNameDiv = document.getElementById("lowerDivRight");
 			colorNameDiv.innerHTML = "";
@@ -51,9 +49,23 @@
 					div.style.width = "250px";
 					div.style.margin = "4px";
 					div.style.padding = "15px";
-					div.style.background = approxColorHex;
-					div.style.color = readableColorForBackground(approxColorHex);;
+					div.style.backgroundColor = approxColorHex;
+					div.hexColor = approxColorHex;
+					div.style.color = readableColorForBackground(approxColorHex);
 					div.innerHTML = names[j];
+
+					div.onmouseover = function() {
+						this.style.border = "1px dashed " + readableColorForBackground(rgbStringToHex(this.style.backgroundColor));
+					}
+
+					div.onmouseleave = function() {
+						this.style.border = "none";
+					}
+
+					div.onclick = function() {
+						document.getElementById("colorPicker").jscolor.fromString(this.style.backgroundColor);
+						chooseColor(rgbStringToHex(this.style.backgroundColor));
+					}
 					colorNameDiv.appendChild(div);
 				}
 			}

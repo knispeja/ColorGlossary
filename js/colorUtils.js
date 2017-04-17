@@ -7,6 +7,14 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
+function rgbStringToHex(rgbStr) {
+    var rgb = rgbStr.split( ',' ) ;
+    var r = parseInt(rgb[0].substring(4)) ;
+    var g = parseInt(rgb[1]) ;
+    var b = parseInt(rgb[2]) ;
+    return rgbToHex(r, g, b);
+}
+
 function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
