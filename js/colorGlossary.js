@@ -13,7 +13,7 @@ for (var name in colorGlossaryReverse) {
     colorGlossary[hex].push(name);
 }
 
-var euclideanDistance = function(c0, c1) {
+function euclideanDistance(c0, c1) {
     return
         Math.pow(c0.r - c1.r, 2) +
         Math.pow(c0.g - c1.g, 2) +
