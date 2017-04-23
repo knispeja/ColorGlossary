@@ -9,6 +9,7 @@
 	<script src="js/kdTree.js"></script>
 	<script src="js/colorGlossary.js"></script>
 	<script src="js/jscolor.js"></script>
+	<script src="js/index.js"></script>
 </head>
 
 <body>
@@ -32,46 +33,6 @@
 
 	<div id="lowerDivRight">
 	</div>
-
-	<script>
-		function chooseColor(chosenColor) {
-			document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
-			var nearestColors = colorProximityTree.nearest(hexToRgb(chosenColor), 5);
-			var colorNameDiv = document.getElementById("lowerDivRight");
-			colorNameDiv.innerHTML = "";
-			for (var i = 0; i < nearestColors.length; i++) {
-				var approxColorRgb = nearestColors[i][0];
-				var approxColorHex = rgbToHex(approxColorRgb.r, approxColorRgb.g, approxColorRgb.b);
-				var names = colorGlossary[approxColorHex];
-				for (var j = 0; j < names.length; j++) {
-					var div = document.createElement("div");
-					div.style.height = "50px";
-					div.style.width = "250px";
-					div.style.margin = "4px";
-					div.style.padding = "15px";
-					div.style.backgroundColor = approxColorHex;
-					div.hexColor = approxColorHex;
-					div.style.color = readableColorForBackground(approxColorHex);
-					div.innerHTML = names[j];
-					div.style.border = "1px dashed " + approxColorHex;
-
-					div.onmouseover = function() {
-						this.style.border = "1px dashed " + readableColorForBackground(rgbStringToHex(this.style.backgroundColor));
-					}
-
-					div.onmouseleave = function() {
-						this.style.border = "1px dashed " + rgbStringToHex(this.style.backgroundColor);
-					}
-
-					div.onclick = function() {
-						document.getElementById("colorPicker").jscolor.fromString(this.style.backgroundColor);
-						chooseColor(rgbStringToHex(this.style.backgroundColor));
-					}
-					colorNameDiv.appendChild(div);
-				}
-			}
-		}
-	</script>
 </body>
 
 </html>
