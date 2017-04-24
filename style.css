@@ -1,6 +1,7 @@
 body {
     margin: 0 !important;
     padding: 0 !important;
+    font-family: monospace;
 }
 
 hr {
@@ -15,17 +16,29 @@ button {
 input {
     background: transparent;
     border: none;
-    color: orangered;
     font-size: 20pt;
     width: 150pt;
+
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 #upperDiv {
     color: orangered;
+    font-size: 16pt;
     background-color: whitesmoke;
     padding-top: 0px;
-    padding-left: 12px;
-    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 #hexArea {

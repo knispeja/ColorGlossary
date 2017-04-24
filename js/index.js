@@ -10,6 +10,11 @@ function rgbDistTupleComparator(c0, c1) {
 
 function chooseColor(chosenColor) {
     document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
+    var elementsWithDynamicColor = document.getElementsByClassName("dynamicColor");
+    for(var i = 0; i < elementsWithDynamicColor.length; i++) {
+        elementsWithDynamicColor.item(i).style.color = chosenColor;
+    }
+
     var colorNameDiv = document.getElementById("lowerDivRight");
     colorNameDiv.innerHTML = "";
 
@@ -44,7 +49,7 @@ function chooseColor(chosenColor) {
             div.style.backgroundColor = approxColorHex;
             div.hexColor = approxColorHex;
             div.style.color = readableColorForBackground(approxColorHex);
-            div.innerHTML = names[j] + " -- <i>" + nearnessText + "</i>";
+            div.innerHTML = names[j] + "  ~  <i>" + nearnessText + "</i>";
             div.style.border = "1px dashed " + approxColorHex;
 
             div.onmouseover = function() {
