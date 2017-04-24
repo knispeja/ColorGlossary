@@ -12,12 +12,25 @@ button {
     margin-left: 12px;
 }
 
+input {
+    background: transparent;
+    border: none;
+    color: orangered;
+    font-size: 20pt;
+    width: 150pt;
+}
+
 #upperDiv {
     color: orangered;
     background-color: whitesmoke;
     padding-top: 0px;
     padding-left: 12px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+#hexArea {
+    text-align: right;
+    font-size: 24px;
 }
 
 #middleDiv {
