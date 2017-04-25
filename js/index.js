@@ -71,6 +71,6 @@ function chooseColor(chosenColor) {
 
 window.onload = function() {
     var color = randomHexColor();
+    document.getElementById("colorPicker").jscolor.fromString(color);
     chooseColor(color);
-    document.getElementById("chosenValue").value = color.substr(1).toUpperCase();
 }
