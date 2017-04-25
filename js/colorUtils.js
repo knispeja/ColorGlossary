@@ -9,6 +9,10 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
+function rgbObjToHex(rgb) {
+    return rgbToHex(rgb.r, rgb.g, rgb.b);
+}
+
 function rgbStringToHex(rgbStr) {
     var rgb = rgbStr.split( ',' ) ;
     var r = parseInt(rgb[0].substring(4)) ;

@@ -13,6 +13,10 @@ for (var name in colorGlossaryReverse) {
     colorGlossary[hex].push(name);
 }
 
+function randomHexColor() {
+    return rgbObjToHex(allColors[Math.floor(Math.random()*allColors.length)]);
+}
+
 function euclideanDistance(c0, c1) {
     return
         Math.pow(c0.r - c1.r, 2) +

@@ -68,3 +68,9 @@ function chooseColor(chosenColor) {
         }
     }
 }
+
+window.onload = function() {
+    var color = randomHexColor();
+    chooseColor(color);
+    document.getElementById("chosenValue").value = color.substr(1).toUpperCase();
+}
