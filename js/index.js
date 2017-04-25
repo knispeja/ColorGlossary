@@ -1,6 +1,7 @@
 "use strict";
 
 const MAX_DISTANCE = 441.67;
+const EXACT_MATCH_TEXT = "exact match";
 
 function rgbDistTupleComparator(c0, c1) {
     if (c0[1] < c1[1]) return -1;
@@ -38,12 +39,11 @@ function chooseColor(chosenColor) {
         var names = colorGlossary[approxColorHex];
 
         var percentSimilarity = Math.floor(100 - colorDist/MAX_DISTANCE);
-        var nearnessText = colorDist == 0 ? "exact match" : percentSimilarity + "% similar"
+        var nearnessText = colorDist == 0 ? EXACT_MATCH_TEXT : percentSimilarity + "% similar"
 
         for (var j = 0; j < names.length; j++) {
             var div = document.createElement("div");
             div.style.height = "50px";
-            div.style.width = "250px";
             div.style.margin = "4px";
             div.style.padding = "15px";
             div.style.backgroundColor = approxColorHex;
