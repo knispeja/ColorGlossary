@@ -11,32 +11,31 @@ const COLOR_SWATCH_PADDING = 15 + PIXELS;
 
 const INPUT_CHAR_WIDTH_PIXELS = 15;
 
+var colorSwatchDiv;
+
+function anyColorSelectionChange(newColorHex, newColorRgb) {
+    document.getElementsByTagName("body")[0].style.backgroundColor = newColorHex;
+    var elementsWithDynamicColor = document.getElementsByClassName("dynamicColor");
+    for(var i = 0; i < elementsWithDynamicColor.length; i++) {
+        elementsWithDynamicColor.item(i).style.color = newColorHex;
+    }
+
+    updateRgbText(newColorRgb);
+
+    colorSwatchDiv.innerHTML = "";
+}
+
 function chooseColorWithoutPicker(chosenColor) {
     document.getElementById("colorPicker").jscolor.fromString(chosenColor);
     chooseColor(chosenColor);
 }
 
 function chooseColor(chosenColor) {
-    document.getElementsByTagName("body")[0].style.backgroundColor = chosenColor;
-    var elementsWithDynamicColor = document.getElementsByClassName("dynamicColor");
-    for(var i = 0; i < elementsWithDynamicColor.length; i++) {
-        elementsWithDynamicColor.item(i).style.color = chosenColor;
-    }
-
-    var colorNameDiv = document.getElementById("lowerDivRight");
-    colorNameDiv.innerHTML = "";
 
     var chosenColorRgb = hexToRgb(chosenColor);
-    
-    // Set RGB text
-    document.getElementById("red").value = chosenColorRgb.r;
-    document.getElementById("green").value = chosenColorRgb.g;
-    document.getElementById("blue").value = chosenColorRgb.b;
-    updateRgbInputSize("red");
-    updateRgbInputSize("green");
-    updateRgbInputSize("blue");
-    var nearestColors = colorProximityTree.nearest(chosenColorRgb, 5);
+    anyColorSelectionChange(chosenColor, chosenColorRgb);
 
+    var nearestColors = colorProximityTree.nearest(chosenColorRgb, 5);
     for (var i = 0; i < nearestColors.length; i++) {
         var approxColorRgb = nearestColors[i][0];
         var approxColorDist = Math.pow(chosenColorRgb.r - approxColorRgb.r, 2) +
@@ -58,29 +57,7 @@ function chooseColor(chosenColor) {
         var nearnessText = colorDist == 0 ? EXACT_MATCH_TEXT : percentSimilarity + "% similar"
 
         for (var j = 0; j < names.length; j++) {
-            var div = document.createElement("div");
-            div.style.height = COLOR_SWATCH_HEIGHT;
-            div.style.margin = COLOR_SWATCH_MARGIN;
-            div.style.padding = COLOR_SWATCH_PADDING;
-            div.style.backgroundColor = approxColorHex;
-            div.hexColor = approxColorHex;
-            div.style.color = readableColorForBackground(approxColorHex);
-            div.innerHTML = names[j] + "  ~  <i>" + nearnessText + "</i>";
-            div.style.border = "1px dashed " + approxColorHex;
-
-            div.onmouseover = function() {
-                this.style.border = "1px dashed " + readableColorForBackground(rgbStringToHex(this.style.backgroundColor));
-            }
-
-            div.onmouseleave = function() {
-                this.style.border = "1px dashed " + rgbStringToHex(this.style.backgroundColor);
-            }
-
-            div.onclick = function() {
-                document.getElementById("colorPicker").jscolor.fromString(this.style.backgroundColor);
-                chooseColor(rgbStringToHex(this.style.backgroundColor));
-            }
-            colorNameDiv.appendChild(div);
+            addSwatchToDiv(approxColorHex, names[j] + "  ~  <i>" + nearnessText + "</i>");
         }
     }
 }
@@ -89,6 +66,31 @@ function rgbDistTupleComparator(c0, c1) {
     if (c0[1] < c1[1]) return -1;
     if (c0[1] > c1[1]) return 1;
     return 0;
+}
+
+function addSwatchToDiv(hexColor, text) {
+    var div = document.createElement("div");
+    div.style.height = COLOR_SWATCH_HEIGHT;
+    div.style.margin = COLOR_SWATCH_MARGIN;
+    div.style.padding = COLOR_SWATCH_PADDING;
+    div.style.backgroundColor = hexColor;
+    div.hexColor = hexColor;
+    div.style.color = readableColorForBackground(hexColor);
+    div.innerHTML = text;
+    div.style.border = "1px dashed " + hexColor;
+
+    div.onmouseover = function() {
+        this.style.border = "1px dashed " + readableColorForBackground(rgbStringToHex(this.style.backgroundColor));
+    }
+
+    div.onmouseleave = function() {
+        this.style.border = "1px dashed " + rgbStringToHex(this.style.backgroundColor);
+    }
+
+    div.onclick = function() {
+        chooseColorWithoutPicker(rgbStringToHex(this.style.backgroundColor));
+    }
+    colorSwatchDiv.appendChild(div);
 }
 
 function rgbInputChange() {
@@ -108,11 +110,21 @@ function rgbInputChange() {
     chooseColorWithoutPicker(rgbToHex(r, g, b));
 }
 
+function updateRgbText(newRgbColor) {
+    document.getElementById("red").value = newRgbColor.r;
+    document.getElementById("green").value = newRgbColor.g;
+    document.getElementById("blue").value = newRgbColor.b;
+    updateRgbInputSize("red");
+    updateRgbInputSize("green");
+    updateRgbInputSize("blue");
+}
+
 function updateRgbInputSize(inputName) {
     var colorComponent = document.getElementById(inputName).value;
     document.getElementById(inputName).style.width = (numDigits(colorComponent) * INPUT_CHAR_WIDTH_PIXELS) + PIXELS;    
 }
 
 window.onload = function() {
+    colorSwatchDiv = document.getElementById("lowerDivRight")
     chooseColorWithoutPicker(randomHexColor());
 }
