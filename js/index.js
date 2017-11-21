@@ -1,12 +1,19 @@
 "use strict";
 
-const MAX_DISTANCE = 441.67;
+const PIXELS = "px";
 const EXACT_MATCH_TEXT = "exact match";
 
-function rgbDistTupleComparator(c0, c1) {
-    if (c0[1] < c1[1]) return -1;
-    if (c0[1] > c1[1]) return 1;
-    return 0;
+const MAX_DISTANCE = 441.67;
+
+const COLOR_SWATCH_HEIGHT = 50 + PIXELS;
+const COLOR_SWATCH_MARGIN = 4 + PIXELS;
+const COLOR_SWATCH_PADDING = 15 + PIXELS;
+
+const INPUT_CHAR_WIDTH_PIXELS = 15;
+
+function chooseColorWithoutPicker(chosenColor) {
+    document.getElementById("colorPicker").jscolor.fromString(chosenColor);
+    chooseColor(chosenColor);
 }
 
 function chooseColor(chosenColor) {
@@ -20,6 +27,14 @@ function chooseColor(chosenColor) {
     colorNameDiv.innerHTML = "";
 
     var chosenColorRgb = hexToRgb(chosenColor);
+    
+    // Set RGB text
+    document.getElementById("red").value = chosenColorRgb.r;
+    document.getElementById("green").value = chosenColorRgb.g;
+    document.getElementById("blue").value = chosenColorRgb.b;
+    updateRgbInputSize("red");
+    updateRgbInputSize("green");
+    updateRgbInputSize("blue");
     var nearestColors = colorProximityTree.nearest(chosenColorRgb, 5);
 
     for (var i = 0; i < nearestColors.length; i++) {
@@ -36,6 +51,7 @@ function chooseColor(chosenColor) {
         var approxColorRgb = nearestColors[i][0];
         var colorDist = nearestColors[i][1];
         var approxColorHex = rgbToHex(approxColorRgb.r, approxColorRgb.g, approxColorRgb.b);
+        
         var names = colorGlossary[approxColorHex];
 
         var percentSimilarity = Math.floor(100 - colorDist/MAX_DISTANCE);
@@ -43,9 +59,9 @@ function chooseColor(chosenColor) {
 
         for (var j = 0; j < names.length; j++) {
             var div = document.createElement("div");
-            div.style.height = "50px";
-            div.style.margin = "4px";
-            div.style.padding = "15px";
+            div.style.height = COLOR_SWATCH_HEIGHT;
+            div.style.margin = COLOR_SWATCH_MARGIN;
+            div.style.padding = COLOR_SWATCH_PADDING;
             div.style.backgroundColor = approxColorHex;
             div.hexColor = approxColorHex;
             div.style.color = readableColorForBackground(approxColorHex);
@@ -69,8 +85,34 @@ function chooseColor(chosenColor) {
     }
 }
 
+function rgbDistTupleComparator(c0, c1) {
+    if (c0[1] < c1[1]) return -1;
+    if (c0[1] > c1[1]) return 1;
+    return 0;
+}
+
+function rgbInputChange() {
+    var r = parseInt(document.getElementById("red").value);
+    var g = parseInt(document.getElementById("green").value);
+    var b = parseInt(document.getElementById("blue").value);
+
+    r = isNaN(r) ? 0 : r;
+    r = r > 255 ? 255 : r;
+
+    g = isNaN(g) ? 0 : g;
+    g = g > 255 ? 255 : g;
+
+    b = isNaN(b) ? 0 : b;
+    b = b > 255 ? 255 : b;
+
+    chooseColorWithoutPicker(rgbToHex(r, g, b));
+}
+
+function updateRgbInputSize(inputName) {
+    var colorComponent = document.getElementById(inputName).value;
+    document.getElementById(inputName).style.width = (numDigits(colorComponent) * INPUT_CHAR_WIDTH_PIXELS) + PIXELS;    
+}
+
 window.onload = function() {
-    var color = randomHexColor();
-    document.getElementById("colorPicker").jscolor.fromString(color);
-    chooseColor(color);
+    chooseColorWithoutPicker(randomHexColor());
 }

@@ -37,3 +37,7 @@ function readableColorForBackground(hex) {
     }
     return "#ffffff";
 }
+
+function numDigits(x) {
+    return (Math.log10((x ^ (x >> 31)) - (x >> 31)) | 0) + 1;
+}

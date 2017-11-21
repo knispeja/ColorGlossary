@@ -18,7 +18,13 @@
 		<table width=100%>
 			<tr>
     		<td><h2>Color Glossary</h2></td>
-			<td id="hexArea">#<input id="chosenValue" class="dynamicColor" maxlength="6" value="ffffff"></td>
+			<td id="colorInputArea">
+				#<input type="text" id="hexValue" class="dynamicColor" maxlength="6" value="ffffff">
+				<br>
+				<input type="text" id="red" class="rgbValue" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('red')" onInput="updateRgbInputSize('red')" onPaste="updateRgbInputSize('red')" maxlength="3" value="255">,
+				<input type="text" id="green" class="rgbValue" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('green')" onInput="updateRgbInputSize('green')" onPaste="updateRgbInputSize('green')" maxlength="3" value="255">,
+				<input type="text" id="blue" class="rgbValue" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('blue')" onInput="updateRgbInputSize('blue')" onPaste="updateRgbInputSize('blue')" maxlength="3" value="255">
+			</td>
 			</tr>
 		</table>
 	</div>
@@ -29,7 +35,7 @@
 
 	<div id="lowerDiv">
 		<div id="lowerDivLeft">
-			<button id="colorPicker" class="jscolor {width:300, height:200, valueElement:'chosenValue', onFineChange:'chooseColor(\'#\' + this.toString())'}">
+			<button id="colorPicker" class="jscolor {width:300, height:200, valueElement:'hexValue', onFineChange:'chooseColor(\'#\' + this.toString())'}">
 				Choose Color
 			</button>
 		</div>

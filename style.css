@@ -5,28 +5,6 @@ body {
     overflow-y: hidden;
 }
 
-hr {
-    margin: 0;
-}
-
-button {
-    padding: 10px;
-    margin-left: 12px;
-}
-
-input {
-    background: transparent;
-    border: none;
-    font-size: 20pt;
-    width: 150pt;
-
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-}
-
 #upperDiv {
     font-size: 16pt;
     background-color: whitesmoke;
@@ -41,13 +19,48 @@ input {
         1px 1px 0 #000;
 }
 
-#hexArea {
-    text-align: right;
+input {
+    background: transparent;
+    border: none;
+    font-size: 20pt;
+
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#colorInputArea {
     font-size: 24px;
+}
+
+#hexValue {
+    width: 140px;
+}
+
+.rgbValue {
+    width: 46px;
+}
+
+#red {
+    color: red;
+}
+
+#green {
+    color: green;
+}
+
+#blue {
+    color: blue;
 }
 
 #middleDiv {
     background-color: whitesmoke;
+}
+
+hr {
+    margin: 0;
 }
 
 #lowerDiv {
@@ -57,7 +70,13 @@ input {
 
 #lowerDivLeft {
     width: 400px;
+    height: 100%;
     float: left;
+}
+
+button {
+    padding: 10px;
+    margin-left: 12px;
 }
 
 #lowerDivRight {
