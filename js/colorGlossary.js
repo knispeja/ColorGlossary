@@ -18,10 +18,11 @@ function randomHexColor() {
 }
 
 function euclideanDistance(c0, c1) {
-    return
+    return Math.sqrt(
         Math.pow(c0.r - c1.r, 2) +
         Math.pow(c0.g - c1.g, 2) +
-        Math.pow(c0.b - c1.b, 2);
+        Math.pow(c0.b - c1.b, 2)
+    );
 }
 
 var colorProximityTree = new kdTree(

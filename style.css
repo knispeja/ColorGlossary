@@ -99,6 +99,7 @@ hr {
 #lowerDivRight {
     overflow-y: scroll;
     position: absolute;
+    font-size: 14pt;
     top: 120px;
     left: 400px;
     right: 0px;

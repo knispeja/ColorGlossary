@@ -43,10 +43,7 @@ function chooseColor(chosenColor) {
     var nearestColors = colorProximityTree.nearest(chosenColorRgb, 5);
     for (var i = 0; i < nearestColors.length; i++) {
         var approxColorRgb = nearestColors[i][0];
-        var approxColorDist = Math.pow(chosenColorRgb.r - approxColorRgb.r, 2) +
-                                Math.pow(chosenColorRgb.g - approxColorRgb.g, 2) +
-                                Math.pow(chosenColorRgb.b - approxColorRgb.b, 2);
-        nearestColors[i][1] = approxColorDist;
+        nearestColors[i][1] = euclideanDistance(approxColorRgb, chosenColorRgb);
     }
 
     nearestColors.sort(rgbDistTupleComparator);
@@ -95,10 +92,10 @@ function searchForColor(searchText) {
                 if (indexOfSearchTerm !== -1) {
                     score += searchWord.length;
                     if (i >= j - flex && i <= j) {
-                        score += 3;
+                        score += 2;
                     }
                     if (indexOfSearchTerm == 0) {
-                        score += 6;
+                        score += 5;
                     }
                     var termLengthDifference = colorNameWord.length - indexOfSearchTerm.length;
                     if (termLengthDifference < 3) {
@@ -133,7 +130,7 @@ function searchForColor(searchText) {
     while (!pq.isEmpty() && swatchesAdded < SEARCH_RESULTS_TO_DISPLAY) {
         var result = pq.poll();
         var hexColor = colorGlossaryReverse[result.name];
-        addSwatchToDiv(hexColor, result.name + " ~ " + result.score);
+        addSwatchToDiv(hexColor, result.name + " ~ <i>" + hexColor + "</i>");
         swatchesAdded++;
     }
 }
@@ -157,9 +154,10 @@ function addSwatchToDiv(hexColor, text) {
         this.style.border = "1px dashed " + rgbStringToHex(this.style.backgroundColor);
     }
 
-    div.onclick = function() {
+    div.onmouseup = function() {
         chooseColorWithoutPicker(rgbStringToHex(this.style.backgroundColor));
     }
+
     colorSwatchDiv.appendChild(div);
 }
 
