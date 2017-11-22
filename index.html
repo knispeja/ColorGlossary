@@ -9,24 +9,21 @@
 	<script src="js/kdTree.js"></script>
 	<script src="js/colorGlossary.js"></script>
 	<script src="js/jscolor.js"></script>
+	<script src="js/priorityQueue.js"></script>
 	<script src="js/index.js"></script>
 </head>
 
 <body>
-
 	<div id="upperDiv" class="dynamicColor">
-		<table width=100%>
-			<tr>
-    		<td><h2>Color Glossary</h2></td>
-			<td id="colorInputArea">
-				#<input type="text" id="hexValue" class="dynamicColor" maxlength="6" value="ffffff">
-				<br>
-				<input type="text" id="red" class="rgbValue" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('red')" onInput="updateRgbInputSize('red')" onPaste="updateRgbInputSize('red')" maxlength="3" value="255">,
-				<input type="text" id="green" class="rgbValue" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('green')" onInput="updateRgbInputSize('green')" onPaste="updateRgbInputSize('green')" maxlength="3" value="255">,
-				<input type="text" id="blue" class="rgbValue" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('blue')" onInput="updateRgbInputSize('blue')" onPaste="updateRgbInputSize('blue')" maxlength="3" value="255">
-			</td>
-			</tr>
-		</table>
+		<div id="titleArea"><h2>Color Glossary</h2></div>
+		<div id="colorInputArea">
+			#<input id="hexValue" type="text" class="dynamicColor" maxlength="6" value="ffffff">
+			<br>
+			<div id="rgbInputArea">
+				<input id="red" type="text" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('red')" onInput="updateRgbInputSize('red')" onPaste="updateRgbInputSize('red')" maxlength="3" value="255">,<input type="text" id="green" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('green')" onInput="updateRgbInputSize('green')" onPaste="updateRgbInputSize('green')" maxlength="3" value="255">,<input type="text" id="blue" onChange="rgbInputChange()" onKeyDown="updateRgbInputSize('blue')" onInput="updateRgbInputSize('blue')" onPaste="updateRgbInputSize('blue')" maxlength="3" value="255">
+			</div>
+		</div>
+		<br style="clear: left;"/>
 	</div>
 
 	<div id="middleDiv">
@@ -35,9 +32,9 @@
 
 	<div id="lowerDiv">
 		<div id="lowerDivLeft">
-			<button id="colorPicker" class="jscolor {width:300, height:200, valueElement:'hexValue', onFineChange:'chooseColor(\'#\' + this.toString())'}">
-				Choose Color
-			</button>
+			Search: <input type="text" onChange="searchForColor(this.value)" onKeyDown="searchForColor(this.value)" onInput="searchForColor(this.value)" onPaste="searchForColor(this.value)">
+			<br>
+			<button id="colorPicker" class="jscolor {width:300, height:200, valueElement:'hexValue', onFineChange:'chooseColor(\'#\' + this.toString())'}"></button>
 		</div>
 
 		<div id="lowerDivRight">

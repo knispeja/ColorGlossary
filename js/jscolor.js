@@ -538,7 +538,7 @@ var jsc = {
 		} else {
 			// Mouse is outside the picker controls -> hide the color picker!
 			if (jsc.picker && jsc.picker.owner) {
-				jsc.picker.owner.hide();
+				//jsc.picker.owner.hide(); // never hide picker
 			}
 		}
 	},

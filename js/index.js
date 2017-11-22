@@ -3,6 +3,9 @@
 const PIXELS = "px";
 const EXACT_MATCH_TEXT = "exact match";
 
+const CHARACTERS_REQUIRED_BEFORE_SEARCHING = 2;
+const SEARCH_RESULTS_TO_DISPLAY = 10;
+
 const MAX_DISTANCE = 441.67;
 
 const COLOR_SWATCH_HEIGHT = 50 + PIXELS;
@@ -15,8 +18,9 @@ var colorSwatchDiv;
 
 function anyColorSelectionChange(newColorHex, newColorRgb) {
     document.getElementsByTagName("body")[0].style.backgroundColor = newColorHex;
+    document.getElementById("lowerDiv").style.color = readableColorForBackground(newColorHex);
     var elementsWithDynamicColor = document.getElementsByClassName("dynamicColor");
-    for(var i = 0; i < elementsWithDynamicColor.length; i++) {
+    for (var i = 0; i < elementsWithDynamicColor.length; i++) {
         elementsWithDynamicColor.item(i).style.color = newColorHex;
     }
 
@@ -31,7 +35,6 @@ function chooseColorWithoutPicker(chosenColor) {
 }
 
 function chooseColor(chosenColor) {
-
     var chosenColorRgb = hexToRgb(chosenColor);
     anyColorSelectionChange(chosenColor, chosenColorRgb);
 
@@ -66,6 +69,48 @@ function rgbDistTupleComparator(c0, c1) {
     if (c0[1] < c1[1]) return -1;
     if (c0[1] > c1[1]) return 1;
     return 0;
+}
+
+function searchForColor(searchText) {
+
+    if (searchText == null || searchText.length < CHARACTERS_REQUIRED_BEFORE_SEARCHING) {
+        return;
+    }
+
+    var pq = new FastPriorityQueue(function(a,b) {return a.score > b.score});;
+    var searchTextSplit = searchText.toLowerCase().split(" ");
+    for (var colorName in colorGlossaryReverse) {
+        var score = 0;
+        var lowerCaseColorName = colorName.toLowerCase();
+        for (var i=0; i<searchTextSplit.length; i++) {
+            var word = searchTextSplit[i];
+            if (lowerCaseColorName.indexOf(word) !== -1) {
+                score+=word.length;
+            }
+        }
+
+        if (score > 0) {
+            pq.add({name: colorName, score: score});
+        }
+    }
+
+    if (pq.isEmpty()) {
+        colorSwatchDiv.innerHTML = "<br><center><h1><b>No results!</b></h1></center>";
+        return;
+    }
+
+    var chosenColorHex = colorGlossaryReverse[pq.peek().name];
+    document.getElementById("colorPicker").jscolor.fromString(chosenColorHex);
+    anyColorSelectionChange(chosenColorHex, hexToRgb(chosenColorHex));
+
+    // Add swatches of search results
+    var swatchesAdded = 0;
+    while (!pq.isEmpty() && swatchesAdded < SEARCH_RESULTS_TO_DISPLAY) {
+        var result = pq.poll();
+        var hexColor = colorGlossaryReverse[result.name];
+        addSwatchToDiv(hexColor, result.name);
+        swatchesAdded++;
+    }
 }
 
 function addSwatchToDiv(hexColor, text) {
@@ -127,4 +172,5 @@ function updateRgbInputSize(inputName) {
 window.onload = function() {
     colorSwatchDiv = document.getElementById("lowerDivRight")
     chooseColorWithoutPicker(randomHexColor());
+    document.getElementById("colorPicker").jscolor.show();
 }

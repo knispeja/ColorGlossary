@@ -8,9 +8,8 @@ body {
 #upperDiv {
     font-size: 16pt;
     background-color: whitesmoke;
-    padding-top: 0px;
-    padding-left: 25px;
     padding-bottom: 10px;
+    width: 100%;
 
     text-shadow:
         -1px -1px 0 #000,
@@ -19,7 +18,21 @@ body {
         1px 1px 0 #000;
 }
 
-input {
+#titleArea {
+    width: 66%;
+    float: left;
+    padding-left: 4%;
+}
+
+#colorInputArea {
+    padding-top: 15px;
+    font-size: 24px;
+    text-align: right;
+    float: left;
+    width: 30%;
+}
+
+#upperDiv input {
     background: transparent;
     border: none;
     font-size: 20pt;
@@ -31,16 +44,12 @@ input {
         1px 1px 0 #000;
 }
 
-#colorInputArea {
-    font-size: 24px;
-}
-
 #hexValue {
-    width: 140px;
+    width: 110px;
 }
 
-.rgbValue {
-    width: 46px;
+#rgbInputArea {
+    padding-right: 26px;
 }
 
 #red {
@@ -49,10 +58,12 @@ input {
 
 #green {
     color: green;
+    margin-left: 4px;
 }
 
 #blue {
     color: blue;
+    margin-left: 4px;
 }
 
 #middleDiv {
@@ -72,11 +83,17 @@ hr {
     width: 400px;
     height: 100%;
     float: left;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
-button {
-    padding: 10px;
-    margin-left: 12px;
+#lowerDivLeft input {
+    width: 355px;
+}
+
+#lowerDivLeft button {
+    padding-top: 30px;
+    border: none;
 }
 
 #lowerDivRight {
