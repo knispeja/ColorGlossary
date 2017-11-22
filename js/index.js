@@ -14,6 +14,8 @@ const COLOR_SWATCH_PADDING = 15 + PIXELS;
 
 const INPUT_CHAR_WIDTH_PIXELS = 15;
 
+const STOP_WORDS = ["and", "but", "the"];
+
 var colorSwatchDiv;
 
 function anyColorSelectionChange(newColorHex, newColorRgb) {
@@ -81,11 +83,34 @@ function searchForColor(searchText) {
     var searchTextSplit = searchText.toLowerCase().split(" ");
     for (var colorName in colorGlossaryReverse) {
         var score = 0;
-        var lowerCaseColorName = colorName.toLowerCase();
+        var colorNameSplit = colorName.toLowerCase().split(" ");
         for (var i=0; i<searchTextSplit.length; i++) {
-            var word = searchTextSplit[i];
-            if (lowerCaseColorName.indexOf(word) !== -1) {
-                score+=word.length;
+            var searchWord = searchTextSplit[i];
+            var flex = 0;
+            for (var j=0; j<colorNameSplit.length; j++) {
+                var colorNameWord = colorNameSplit[j];
+                var isStopWord = colorNameWord.length < 3 || STOP_WORDS.indexOf(colorNameWord) !== -1;
+                var indexOfSearchTerm = colorNameWord.indexOf(searchWord);
+
+                if (indexOfSearchTerm !== -1) {
+                    score += searchWord.length;
+                    if (i >= j - flex && i <= j) {
+                        score += 1;
+                    }
+                    if (indexOfSearchTerm == 0) {
+                        score += 3;
+                    }
+                    var termLengthDifference = colorNameWord.length - indexOfSearchTerm.length;
+                    if (termLengthDifference < 2 && !isStopWord) {
+                        score += (4 - termLengthDifference);
+                    }
+                } else if (!isStopWord) {
+                    score--;
+                }
+
+                if (isStopWord) {
+                    flex++;
+                }
             }
         }
 
