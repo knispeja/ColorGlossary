@@ -80,7 +80,7 @@ function searchForColor(searchText) {
     }
 
     var pq = new FastPriorityQueue(function(a,b) {return a.score > b.score});;
-    var searchTextSplit = searchText.toLowerCase().split(" ");
+    var searchTextSplit = searchText.trim().toLowerCase().split(" ");
     for (var colorName in colorGlossaryReverse) {
         var score = 0;
         var colorNameSplit = colorName.toLowerCase().split(" ");
@@ -95,13 +95,13 @@ function searchForColor(searchText) {
                 if (indexOfSearchTerm !== -1) {
                     score += searchWord.length;
                     if (i >= j - flex && i <= j) {
-                        score += 1;
-                    }
-                    if (indexOfSearchTerm == 0) {
                         score += 3;
                     }
+                    if (indexOfSearchTerm == 0) {
+                        score += 6;
+                    }
                     var termLengthDifference = colorNameWord.length - indexOfSearchTerm.length;
-                    if (termLengthDifference < 2 && !isStopWord) {
+                    if (termLengthDifference < 3) {
                         score += (4 - termLengthDifference);
                     }
                 } else if (!isStopWord) {
@@ -133,7 +133,7 @@ function searchForColor(searchText) {
     while (!pq.isEmpty() && swatchesAdded < SEARCH_RESULTS_TO_DISPLAY) {
         var result = pq.poll();
         var hexColor = colorGlossaryReverse[result.name];
-        addSwatchToDiv(hexColor, result.name);
+        addSwatchToDiv(hexColor, result.name + " ~ " + result.score);
         swatchesAdded++;
     }
 }
@@ -192,6 +192,14 @@ function updateRgbText(newRgbColor) {
 function updateRgbInputSize(inputName) {
     var colorComponent = document.getElementById(inputName).value;
     document.getElementById(inputName).style.width = (numDigits(colorComponent) * INPUT_CHAR_WIDTH_PIXELS) + PIXELS;    
+}
+
+if(typeof(String.prototype.trim) === "undefined")
+{
+    String.prototype.trim = function() 
+    {
+        return String(this).replace(/^\s+|\s+$/g, '');
+    };
 }
 
 window.onload = function() {
