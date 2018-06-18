@@ -6,7 +6,7 @@ Current glossary size:
 
 	4,470 unique names
 	
-	4,105 hex values (compared to 16,777,216 possible!)
+	4,105 hex values (compared to 16,777,216 possible RGB colors, this is only 0.02%!)
 
 ---
 
