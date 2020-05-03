@@ -76,7 +76,7 @@ function searchForColor(searchText) {
         return;
     }
 
-    var pq = new FastPriorityQueue(function(a,b) {return a.score > b.score});;
+    var pq = new FastPriorityQueue(function(a,b) {return a.score > b.score});
     var searchTextSplit = searchText.trim().toLowerCase().split(" ");
     for (var colorName in colorGlossaryReverse) {
         var score = 0;
@@ -93,11 +93,16 @@ function searchForColor(searchText) {
                     score += searchWord.length;
                     if (i >= j - flex && i <= j) {
                         score += 2;
+
+                        if (i == j)
+                        {
+                            score++;
+                        }
                     }
                     if (indexOfSearchTerm == 0) {
                         score += 5;
                     }
-                    var termLengthDifference = colorNameWord.length - indexOfSearchTerm.length;
+                    var termLengthDifference = Math.abs(colorNameWord.length - indexOfSearchTerm.length);
                     if (termLengthDifference < 3) {
                         score += (4 - termLengthDifference);
                     }
