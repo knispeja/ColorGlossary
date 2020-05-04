@@ -25,6 +25,10 @@ function anyColorSelectionChange(newColorHex, newColorRgb) {
 
     updateRgbText(newColorRgb);
 
+    if (window.history.replaceState) {
+        window.history.replaceState(document.title, document.title, "?" + newColorHex.substring(1));
+    }
+
     colorSwatchDiv.innerHTML = "";
 }
 
@@ -209,7 +213,19 @@ if(typeof(String.prototype.trim) === "undefined")
 }
 
 window.onload = function() {
-    colorSwatchDiv = document.getElementById("lowerDivRight")
-    chooseColorWithoutPicker(randomHexColor());
+    colorSwatchDiv = document.getElementById("lowerDivRight");
+
+    var initialColor;
+    var colorFromUrl = location.search.substring(1);
+    if (location.search == "" || !isHexColor(colorFromUrl))
+    {
+        initialColor = randomHexColor();
+    }
+    else
+    {
+        initialColor = "#" + colorFromUrl;
+    }
+
+    chooseColorWithoutPicker(initialColor);
     document.getElementById("colorPicker").jscolor.show();
 }
