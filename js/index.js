@@ -1,12 +1,9 @@
 "use strict";
 
 const PIXELS = "px";
-const EXACT_MATCH_TEXT = "exact match";
 
 const CHARACTERS_REQUIRED_BEFORE_SEARCHING = 2;
 const SEARCH_RESULTS_TO_DISPLAY = 10;
-
-const MAX_DISTANCE = 441.67;
 
 const COLOR_SWATCH_HEIGHT = 50 + PIXELS;
 const COLOR_SWATCH_MARGIN = 4 + PIXELS;
@@ -55,11 +52,17 @@ function chooseColor(chosenColor) {
         
         var names = colorGlossary[approxColorHex];
 
-        var percentSimilarity = Math.floor(100 - colorDist/MAX_DISTANCE);
-        var nearnessText = colorDist == 0 ? EXACT_MATCH_TEXT : percentSimilarity + "% similar"
-
         for (var j = 0; j < names.length; j++) {
-            addSwatchToDiv(approxColorHex, names[j] + "  ~  <i>" + nearnessText + "</i>");
+            var colorName;
+            if (colorDist == 0)
+            {
+                colorName = "<b>" + names[j] + "</b>";
+            }
+            else
+            {
+                colorName = names[j];
+            }
+            addSwatchToDiv(approxColorHex, colorName);
         }
     }
 }
