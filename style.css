@@ -74,6 +74,10 @@ hr {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 #lowerDiv {
     padding-top: 12px;
     width: 100%;
@@ -104,4 +108,11 @@ hr {
     left: 400px;
     right: 0px;
     bottom: 0px;
+}
+
+#linkDiv {
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+    font-size: 12pt;
 }
